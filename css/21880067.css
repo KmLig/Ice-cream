@@ -1,0 +1,63 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #7c7c7c;
+}
+
+/* header */
+#menu li a {
+    font-family: 'Changa One', cursive;
+    color: #333333;    
+}
+
+#menu li a:hover,
+#menu li.active a {
+    color: #2fa0d5;
+}
+
+#frm-search {
+    display: block;
+    width: 169px;
+    height: 32px;
+    border: 1px solid #d5d5d5;
+    padding: 4px 11px 6px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    margin: 0 10px;
+}
+
+#searchword {
+    border: none;
+    background: white;
+    box-shadow: 0 0 0;
+    padding: 0;
+}
+
+#btn-search {
+    border: none;
+    width: 18px;
+    background: url(../images/search_button.png) 0 0 no-repeat;
+}
+
+#social a {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0;
+    height: 25px;
+    width: 27px;
+    cursor: pointer;
+}
+
+#social a.twitter {
+    background: url(../images/twitter.png) 0 0 no-repeat;
+}
+#social a.twitter:hover {
+    background: url(../images/twitter_active.png) 0 0 no-repeat;
+}
+#social a.facebook {
+    background: url(../images/facebook.png) 0 0 no-repeat;
+}
+#social a.facebook:hover {
+    background: url(../images/facebook_active.png) 0 0 no-repeat;
+}
