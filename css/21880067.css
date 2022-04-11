@@ -52,12 +52,78 @@ body{
 #social a.twitter {
     background: url(../images/twitter.png) 0 0 no-repeat;
 }
+
 #social a.twitter:hover {
     background: url(../images/twitter_active.png) 0 0 no-repeat;
 }
+
 #social a.facebook {
     background: url(../images/facebook.png) 0 0 no-repeat;
 }
+
 #social a.facebook:hover {
     background: url(../images/facebook_active.png) 0 0 no-repeat;
+}
+
+/* banner */
+#banner {
+    background: url(../images/bg_slider.gif) center bottom repeat;
+    color: white;
+    padding: 110px 0 40px;    
+}
+
+#banner h4 {
+    font-size: 60px;
+    line-height: 60px;
+    font-family: 'Changa One', cursive;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#btn-menu {
+    display: inline-block;
+    font: 30px 'Changa One', cursive;
+    line-height: 36px;
+    background-color: #fa97c2;
+    padding: 14px 62px;
+    border-radius: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 30px 0;
+    color: white;
+}
+
+#dots {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    height: 19px;
+    line-height: 19px;
+}
+
+#dots li {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    text-align: left;
+    text-indent: 9999px;
+    background: white;
+    margin: 0 2px;
+    position: relative;
+}
+
+#dots li span {
+    border-radius: 9px;
+    width: 9px;
+    height: 9px;    
+    position: absolute;
+    top: 5px;
+    left: 5px;    
+}
+
+#dots li.active span,
+#dots li:hover span {
+    box-shadow: 0;
+    background: #73C936;
 }
