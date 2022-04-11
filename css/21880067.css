@@ -122,8 +122,71 @@ body{
     left: 5px;    
 }
 
-#dots li.active span,
+#dots li.current span,
 #dots li:hover span {
     box-shadow: 0;
     background: #73C936;
+}
+@media screen and (min-width: 768px) {
+    #menu li {
+        margin-left: 25px;
+        padding: 0;
+    }
+    #logo {
+        position: relative;
+    }
+    
+    #logo::after {
+        position: absolute;
+        content: "";
+        background: url(../images/logo_bg.png) 0 0 no-repeat;
+        width: 188px;
+        height: 133px;
+        bottom: -140px;
+        left: -2px;
+    }
+    
+    #frm-search {
+        position: relative;
+    }
+    #frm-search::after {
+        position: absolute;
+        content: "";
+        background: url(../images/search_bg.png) 0 0 no-repeat;
+        width: 230px;
+        height: 44px;
+        left: 10px;
+        bottom: -70px;
+    }
+}
+
+/* main */
+.main h4 {
+    font-family: 'Changa One', cursive;
+    font-weight: 400;
+    color: #333333;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+a.readmore {
+    text-decoration: underline;
+    color: #2fa0d5;
+}
+
+/* about */
+.about {
+    background: #fa97c2;
+    color: #814e64;    
+}
+.about h3 {
+    font-family: 'Changa One', cursive;
+    font-weight: 400;    
+    font-size: 60px;
+    margin: 10px 0;;
+}
+
+.about div > img {
+    float: left;
+    margin: 20px;
 }

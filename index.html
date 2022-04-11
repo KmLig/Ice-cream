@@ -18,7 +18,7 @@
     <!-- header -->
     <header class="container">
         <nav class="navbar navbar-expand-sm navbar-light px-0">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" id="logo">
                 <img src="./images/logo.png" alt="">
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -69,7 +69,7 @@
                 <a id="btn-menu" href="">See our menu</a>
             </div>
             <ul id="dots">
-                <li class="active"><span>0</span></li>
+                <li class="current"><span>0</span></li>
                 <li><span>1</span></li>
                 <li><span>2</span></li>
             </ul>
@@ -77,49 +77,52 @@
     </div>
     <!-- /banner -->
     <!-- main -->
-    <div class="container">
-        <div class="row">
+    <div class="container main">
+        <div class="row my-5">
             <div class="col-sm-6 col-md-3 text-center">
                 <img src="./images/icon-1.png" alt="">
                 <h4>Coffee</h4>
-                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.<a href="#">Read more</a></div>
+                <div class="pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <a class="readmore" href="#">Read more</a>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
                 <img src="./images/icon-2.png" alt="">
                 <h4>Drinks</h4>
-                <div>Odio ratione provident in quae quas quos eos!<a href="#">Read more</a></div>
+                <div class="pb-2">Odio ratione provident in quae quas quos eos!</div>
+                <a class="readmore" href="#">Read more</a>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
                 <img src="./images/icon-3.png" alt="">
                 <h4>Cakes</h4>
-                <div>Ad fugit quos iste perferendis consectetur possimus vitae?<a href="#">Read more</a></div>
+                <div class="pb-2">Ad fugit quos iste perferendis consectetur possimus vitae?</div>
+                <a class="readmore" href="#">Read more</a>
             </div>
             <div class="col-sm-6 col-md-3 text-center">
                 <img src="./images/icon-4.png" alt="">
                 <h4>Ice-cream</h4>
-                <div>Velit repellat vitae illum accusantium? Perferendis, dignissimos deserunt.<a href="#">Read more</a>
-                </div>
+                <div class="pb-2">Velit repellat vitae illum accusantium? Perferendis Perferendis.</div>
+                <a class="readmore" href="#">Read more</a>
             </div>
         </div>
     </div>
     <!-- /main -->
     <!-- about us -->
-    <div class="container-fluid">
+    <div class="container-fluid about py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <h3>About us</h3>
+                    <h3 class="text-white">About us</h3>
                     <div>
                         <img src="./images/icon-about.png" alt="">
                         <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium inventore ea maiores facere
                             voluptatum similique saepe sunt officia fuga, reprehenderit explicabo ducimus libero, officiis
                             exercitationem. Minima quasi adipisci repellendus assumenda.</div>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta commodi ea corrupti voluptatum
+                        <div class="pt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta commodi ea corrupti voluptatum
                             ratione ex illum iusto nulla accusantium ullam!. <a href="">Read more</a></div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <form action="post">
+                    <form action="post" id="frm-signup">
                         <h3>Newsletter <br> Sign up</h3>
                         <div>Please write an email:</div>
                         <div>
