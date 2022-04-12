@@ -68,8 +68,7 @@ body{
 /* banner */
 #banner {
     background: url(../images/bg_slider.gif) center bottom repeat;
-    color: white;
-    padding: 110px 0 40px;    
+    color: white;        
 }
 
 #banner h4 {

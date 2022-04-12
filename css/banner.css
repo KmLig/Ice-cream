@@ -1,29 +1,27 @@
 @media screen and (min-width: 768px) {
     
-    #logo {
+    #banner > .container {
         position: relative;
+        padding: 110px 0 40px;
     }
     
-    #logo::after {
+    #banner > .container::before {
         position: absolute;
         content: "";
         background: url(../images/logo_bg.png) 0 0 no-repeat;
         width: 188px;
         height: 133px;
-        bottom: -140px;
-        left: -2px;
-    }
+        top: 0;
+        left: 0;
+    }   
     
-    #frm-search {
-        position: relative;
-    }
-    #frm-search::after {
+    #banner > .container::after {
         position: absolute;
         content: "";
         background: url(../images/search_bg.png) 0 0 no-repeat;
         width: 230px;
         height: 44px;
-        left: 10px;
-        bottom: -70px;
+        top: 0;
+        right: 0;
     }
 }
