@@ -127,41 +127,14 @@ body{
     box-shadow: 0;
     background: #73C936;
 }
-@media screen and (min-width: 768px) {
-    #menu li {
-        margin-left: 25px;
-        padding: 0;
-    }
-    #logo {
-        position: relative;
-    }
-    
-    #logo::after {
-        position: absolute;
-        content: "";
-        background: url(../images/logo_bg.png) 0 0 no-repeat;
-        width: 188px;
-        height: 133px;
-        bottom: -140px;
-        left: -2px;
-    }
-    
-    #frm-search {
-        position: relative;
-    }
-    #frm-search::after {
-        position: absolute;
-        content: "";
-        background: url(../images/search_bg.png) 0 0 no-repeat;
-        width: 230px;
-        height: 44px;
-        left: 10px;
-        bottom: -70px;
-    }
+
+#menu li {
+    margin-left: 25px;
+    padding: 0;
 }
 
 /* main */
-.main h4 {
+h4 {
     font-family: 'Changa One', cursive;
     font-weight: 400;
     color: #333333;
@@ -179,7 +152,7 @@ a.readmore {
     background: #fa97c2;
     color: #814e64;    
 }
-.about h3 {
+h3 {
     font-family: 'Changa One', cursive;
     font-weight: 400;    
     font-size: 60px;
@@ -189,4 +162,107 @@ a.readmore {
 .about div > img {
     float: left;
     margin: 20px;
+}
+
+#frm-signup {
+    border: 3px dashed #814e64;
+    padding: 20px 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+#frm-signup h3 {
+    font-size: 30px;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+    color: white;
+}
+
+#frm-signup input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+    padding: 10px;
+    box-shadow: 0 0;
+    margin: 6px 0;    
+}
+
+#frm-signup button {
+    float: right;
+    border: none;
+    border-radius: 14px;
+    color: white;
+    background: #333333;
+    font: 22px 'Changa One', cursive;
+    text-transform: uppercase;
+    line-height: 26px;
+    padding: 10px 34px;
+}
+
+.date {
+    text-align: center;
+    background: #73c926;
+    color: white;
+    font: 30px 'Changa One', cursive;
+    line-height: 30px;
+    padding: 8px 0;
+    border-radius: 14px;
+    margin: 10px 0;
+}
+
+footer {
+    background: url(../images/bg.gif) 0 center repeat;
+    text-align: center;
+    padding: 20px;    
+}
+
+footer li {
+    display: inline-block;
+    padding: 0 90px 15px 0;
+}
+
+footer a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+footer nav a,
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+footer nav a:hover,
+footer nav .active a {
+    color: #fa97c2;
+}
+
+/* about page */
+#small-banner {
+    background: url(../images/bg_slider.gif) center top repeat;
+    padding: 0.25em;
+    content: "";    
+}
+
+.round-img {
+    border: none;
+    border-radius: 15px;
+    float: left;
+    margin-right: 15px;
+}
+
+#testimonial .col {
+    background: url(../images/quot.png) top left no-repeat;
+    padding-left: 50px;
+}
+
+#testimonial h3 {
+    margin-left: -20px;
+}
+
+.img-rounded {
+    border: none;
+    border-radius: 10px;    
 }
