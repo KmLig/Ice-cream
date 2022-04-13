@@ -172,7 +172,6 @@
         </div>
         {{/each}}
     </script>
-
     <script id="details-template" type="text/x-handlebars-template">
 
         <!-- small banner -->
@@ -188,28 +187,12 @@
     {{/each}}
     <!-- /details -->
     </script>
-
+    <script src="./js/21880067.js"></script>
     <script>
         $(document).ready(function () {
             loadData('products', '#products', '#products-template');
             loadData('news', '#news', '#news-template');
-        })
-        function loadData(request, targetId, sourceId) {
-            $.ajax({
-                url: 'https://web1-api.herokuapp.com/api/' + request,
-                cache: false,
-                success: function (data) {
-                    console.log(data);
-                    let jsonData = {
-                        data: data
-                    };
-                    let target = $(targetId);
-                    let source = $(sourceId).html();
-                    let template = Handlebars.compile(source);
-                    $(target).html(template(jsonData));
-                }
-            });
-        }
+        })        
     </script>
 </body>
 

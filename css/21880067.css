@@ -252,12 +252,12 @@ footer nav .active a {
     margin-right: 15px;
 }
 
-#testimonial .col {
+#testimonials .col {
     background: url(../images/quot.png) top left no-repeat;
     padding-left: 50px;
 }
 
-#testimonial h3 {
+#testimonials h3 {
     margin-left: -20px;
 }
 
