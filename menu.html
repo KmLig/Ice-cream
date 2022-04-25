@@ -66,19 +66,16 @@
     </div>
     <div class="container py-5">
         <h3 class="text-dark">Menu</h3>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img1.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img2.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img3.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img4.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img5.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img6.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img7.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img8.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img9.jpg" alt="" class="img-thumbnail"></div>
-            <div class="col-sm-6 col-md-4 col-lg-3"><img src="./images/gallery/gallery-img10.jpg" alt="" class="img-thumbnail"></div>
-        </div>
+        <div class="font-weight-bold">Filter by category</div>
+        <!-- gallery-categories -->
+        <ul class="nav justify-content-left" id="gallery-categories">            
+        </ul>
+        <!-- /gallery-categories -->
 
+        <!-- gallery -->
+        <div class="row" id="gallery">
+        </div>
+        <!--/ gallery -->
     </div>    
     <!-- footer -->
     <footer class="container-fluid">
@@ -101,6 +98,39 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/handlebars-v4.7.7.js"></script>
+    <script src="./js/21880067.js"></script>
+    <script id="gallery-categories-template" type="text/x-handlebars-template">        
+        <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="loadGallery(this)">Show all</a>
+        </li>
+        {{#each data}}
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadGallery(this, {{id}})">{{name}}</a>
+        </li>
+        {{/each}}
+    </script>
+    <script id="gallery-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="col-sm-6 col-md-4 col-lg-3 mb-5"><img src="{{imagepath}}" alt="" class="img-thumbnail"></div>
+        {{/each}}
+    </script>
+    <script>
+        $(document).ready(function() {
+            loadData("gallery-categories", "#gallery-categories", "#gallery-categories-template");
+            loadData("gallery", "#gallery", "#gallery-template");
+        })
+        function loadGallery(link, id) {
+            if (id) {
+                loadData(`gallery/categories/${id}`, "gallery", "#gallery-template");
+            } else {
+                loadData("gallery", "#gallery", "#gallery-template");
+            }
+            $("#gallery-categories .nav-link").removeClass("disabled");
+            console.log(link); // show the clicked element
+            $(link).addClass("disabled");
+        }
+    </script>
 </body>
 
 </html>
