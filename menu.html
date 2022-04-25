@@ -122,7 +122,7 @@
         })
         function loadGallery(link, id) {
             if (id) {
-                loadData(`gallery/categories/${id}`, "gallery", "#gallery-template");
+                loadData(`gallery/categories/${id}`, "#gallery", "#gallery-template");
             } else {
                 loadData("gallery", "#gallery", "#gallery-template");
             }
