@@ -265,3 +265,24 @@ footer nav .active a {
     border: none;
     border-radius: 10px;    
 }
+
+/* blog */
+.blog-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.blog-list li {
+    padding-bottom: 10px;
+    padding-left: 24px;
+    background: url(../images/marker1.png) 0 4px no-repeat;
+}
+
+.blog-list li a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+.blog-list li a:hover {
+    color: #73c926;
+}
