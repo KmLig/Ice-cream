@@ -68,7 +68,7 @@
         <h3 class="text-dark">Menu</h3>
         <div class="font-weight-bold">Filter by category</div>
         <!-- gallery-categories -->
-        <ul class="nav justify-content-left" id="gallery-categories">            
+        <ul class="nav justify-content-left" id="gallery-categories">
         </ul>
         <!-- /gallery-categories -->
 
@@ -76,14 +76,14 @@
         <div class="row" id="gallery">
         </div>
         <!--/ gallery -->
-    </div>    
+    </div>
     <!-- footer -->
     <footer class="container-fluid">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./about.html">About</a></li>
-                <li  class="active"><a href="./menu/html">Menu</a></li>
+                <li class="active"><a href="./menu/html">Menu</a></li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contacts.html">Contacts</a></li>
             </ul>
@@ -100,7 +100,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/handlebars-v4.7.7.js"></script>
     <script src="./js/21880067.js"></script>
-    <script id="gallery-categories-template" type="text/x-handlebars-template">        
+    <script id="gallery-categories-template" type="text/x-handlebars-template">
         <li class="nav-item">
             <a class="nav-link active" href="#" onclick="loadGallery(this)">Show all</a>
         </li>
@@ -116,7 +116,7 @@
         {{/each}}
     </script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             loadData("gallery-categories", "#gallery-categories", "#gallery-categories-template");
             loadData("gallery", "#gallery", "#gallery-template");
         })

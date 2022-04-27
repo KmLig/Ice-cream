@@ -286,4 +286,9 @@ footer nav .active a {
 .blog-list li a:hover {
     color: #73c926;
 }
+/* contact */
+#map{
+    width: 100%;
+    height: 400px;
+}
 

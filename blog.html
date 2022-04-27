@@ -243,7 +243,7 @@
             loadBlog("blogs");
         })
 
-        function loadBlog(request, page=1) {
+        function loadBlog(request, page = 1) {
             $.ajax({
                 url: `https://web1-api.herokuapp.com/api/${request}?page=${page}`,
                 cache: false,
@@ -284,27 +284,27 @@
             $.ajax({
                 url: "https://web1-api.herokuapp.com/users/authenticate",
                 dataType: "json",
-                type : "POST",
+                type: "POST",
                 data: {
                     username: 'test',
                     password: '1c3cr3@m' //icecream
                 },
-                success : function(r) {
+                success: function (r) {
                     $.ajax({
-                    url: "https://web1-api.herokuapp.com/users/comment",
-                    dataType: "json",
-                    type : "POST",
-                    headers: {
-                        "Authorization": 'Bearer ' + r.token
-                    },
-                    data: formData,
-                    success : function(r) {
-                        loadDetail(formData.blogId);
-                    },
-                    error: function(xhr, status, error) {
-                        window.alert(error);
-                    }
-                });
+                        url: "https://web1-api.herokuapp.com/users/comment",
+                        dataType: "json",
+                        type: "POST",
+                        headers: {
+                            "Authorization": 'Bearer ' + r.token
+                        },
+                        data: formData,
+                        success: function (r) {
+                            loadDetail(formData.blogId);
+                        },
+                        error: function (xhr, status, error) {
+                            window.alert(error);
+                        }
+                    });
                 }
             });
             return false;

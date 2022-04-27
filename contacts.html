@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>21880067 - Ice-cream - About</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
+    <link rel="stylesheet" href="./css/21880067.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+
+
+</head>
+
+<body>
+    <!-- header -->
+    <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-light px-0">
+            <a class="navbar-brand" href="./index.html" id="logo">
+                <img src="./images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./menu.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./contacts.html">Contacts</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control" type="text" placeholder="Search" id="searchword">
+                        <div class="input-group-append">
+                            <button class="btn" id="btn-search" type="submit"></button>
+                        </div>
+                    </div>
+                </form>
+                <div id="social">
+                    <a href="" class="btn twitter"></a>
+                    <a href="" class="btn facebook"></a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <!--/ header -->
+
+    <div class="container-fluid" id="small-banner">
+
+    </div>
+    <div class="container py-5">
+        <h3 class="text-dark">Contacts</h3>
+        <div class="" id="map"></div>
+        <script src="./js/map.js"></script>
+        <div class="row">
+            <div class="col">
+                <h3 class="text-dark">Address</h3>
+                <div>
+                    227 Nguyen Van Cu <br>
+                    District 5 <br>
+                    Ho Chi Minh City, Vietnam
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="text-dark">Phones</h3>
+                <div>
+                    +1 800 559 6580 <br>
+                    +1 504 889 9898
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="text-dark">Email</h3>
+                <div>
+                    <a href="mailto:mail@demolink.org">mail@demolink.org</a><br>
+                    Download information as vCard
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h3 class="text-dark">Miscellaneous information:</h3>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis doloremque, magni excepturi
+                laboriosam, iste amet alias, incidunt nobis aut voluptatibus itaque cupiditate minus iusto dolores
+                voluptatem eligendi pariatur a in.</div>
+            <div class="font-italic">Send an email. All fields with an * are required.</div>
+            <form action="#" method="POST" id="form-contact">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder=""
+                                aria-describedby="helpId" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder=""
+                                aria-describedby="helpId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" name="subject" id="subject" class="form-control" placeholder=""
+                                aria-describedby="helpId" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea class="form-control" name="message" id="message" rows="3" required></textarea>
+                </div>
+                <div class="text-right">
+                    <div id="msg" class="text-primary float-left"></div>
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="copy" id="copy" value="checkedValue">
+                            Send copy to yourself
+                        </label>
+                        <button type="submit" class="btn btn-link">Send email</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer class="container-fluid">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li class="active"><a href="./menu/html">Menu</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div>
+            Ice-cream &copy; 2019 | <a class="text-uppercase" href="#">Privacy policy</a>
+        </div>
+    </footer>
+    <!-- /footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/handlebars-v4.7.7.js"></script>
+    <script src="./js/21880067.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#msg").html("");
+            $('#form-contact').on('submit', (e) => {
+                e.preventDefault();
+
+                $.ajax({
+                    url: "https://web1-api.herokuapp.com/users/authenticate",
+                    dataType: "json",
+                    type: "POST",
+                    data: {
+                        username: 'test',
+                        password: '1c3cr3@m' //icecream
+                    },
+                    success: function (r) {
+                        let formData = $('#form-contact').serialize();
+                        $.ajax({
+                            url: "https://web1-api.herokuapp.com/users/send",
+                            dataType: "json",
+                            type: "POST",
+                            headers: {
+                                "Authorization": 'Bearer ' + r.token
+                            },
+                            data: formData,
+                            success: function (r) {
+                                $("#msg").html(r.message);
+                            },
+                            error: function (xhr, status, error) {
+                                $("#msg").html(r.error);
+                                //window.alert(error);
+                            }
+                        });
+                    }
+                });
+            })
+        });
+    </script>
+</body>
+
+</html>
