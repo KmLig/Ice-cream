@@ -8,8 +8,9 @@ function loadData(request, targetId, sourceId) {
                 data: data
             };
             let target = $(targetId);
-            let source = $(sourceId).html();
-            let template = Handlebars.compile(source);
+            let template = Handlebars.templates[sourceId];
+            //let source = $(sourceId).html();
+            //let template = Handlebars.compile(source);
             $(target).html(template(jsonData));
         }
     });

@@ -1,0 +1,15 @@
+<h3 class="text-dark">Our Team</h3>
+<div class="row">
+  {{#each data}}
+    <div class="col-md-3">
+      <a
+        href="#"
+        onclick="loadData('team/{{id}}', '#content', 'about-details');"
+      >
+        <img src="{{thumbpath}}" class="img-rounded" alt="" />
+      </a>
+      <p class="text-dark font-weight-bold pt-3">{{name}}</p>
+      <p>{{summary}}</p>
+    </div>
+  {{/each}}
+</div>

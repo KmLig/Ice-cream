@@ -1,0 +1,8 @@
+{{#each data}}
+        <div class="col-sm-6 col-md-3 text-center">
+            <img src="{{thumbpath}}" alt="">
+            <h4>{{name}}</h4>
+            <div class="pb-2">{{summary}}</div>
+            <a class="readmore" href="#" onclick="loadData('products/{{id}}', '#content', 'index-details');">Read more</a>
+        </div>
+{{/each}}

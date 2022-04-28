@@ -1,0 +1,22 @@
+<h3 class="text-dark">Our Vision</h3>
+{{#each data}}
+  <div class="row">
+    <div class="col-sm-4">
+      <a
+        href="#"
+        onclick="loadData('visions/{{id}}', '#content', 'about-details');"
+      >
+        <img src="{{thumbpath}}" alt="" class="round-img" />
+      </a>
+    </div>
+    <div class="col-sm-8">
+      <a
+        href="#"
+        onclick="loadData('visions/{{id}}', '#content', 'about-details');"
+      >
+        <h4 class="py-0 my-0">{{name}}</h4>
+      </a>
+      <p>{{summary}}</p>
+    </div>
+  </div>
+{{/each}}

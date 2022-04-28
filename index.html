@@ -145,53 +145,13 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/handlebars-v4.7.7.js"></script>
-    <script id="products-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col-sm-6 col-md-3 text-center">
-            <img src="{{thumbpath}}" alt="">
-            <h4>{{name}}</h4>
-            <div class="pb-2">{{summary}}</div>
-            <a class="readmore" href="#" onclick="loadData('products/{{id}}', '#content', '#details-template');">Read more</a>
-        </div>
-        {{/each}}
-    </script>
-    <script id="news-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="date">{{date}}</div>
-                        <a class="readmore" href="#" onclick="loadData('news/{{id}}', '#content', '#details-template');">Read more</a>
-                    </div>
-                    <div class="col-sm-8">
-                        <h4>{{name}}</h4>
-                        <div>{{summary}}</div>
-                    </div>
-                </div>                
-        </div>
-        {{/each}}
-    </script>
-    <script id="details-template" type="text/x-handlebars-template">
-
-        <!-- small banner -->
-    <div class="container-fluid" id="small-banner">
-    </div>
-    <!-- /small banner -->
-    <!-- details -->
-    {{#each data}}
-    <div class="container py-5">
-        <h3 class="text-dark">{{name}}</h3>
-        <div>{{{description}}}</div>
-    </div>
-    {{/each}}
-    <!-- /details -->
-    </script>
+    <script src="./js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="./js/templates.js"></script>
     <script src="./js/21880067.js"></script>
     <script>
         $(document).ready(function () {
-            loadData('products', '#products', '#products-template');
-            loadData('news', '#news', '#news-template');
+            loadData('products', '#products', 'index-products');
+            loadData('news', '#news', 'index-news');
         })        
     </script>
 </body>

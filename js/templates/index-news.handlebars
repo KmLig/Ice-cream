@@ -1,0 +1,18 @@
+{{#each data}}
+  <div class="col">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="date">{{date}}</div>
+        <a
+          class="readmore"
+          href="#"
+          onclick="loadData('news/{{id}}', '#content', 'index-details');"
+        >Read more</a>
+      </div>
+      <div class="col-sm-8">
+        <h4>{{name}}</h4>
+        <div>{{summary}}</div>
+      </div>
+    </div>
+  </div>
+{{/each}}

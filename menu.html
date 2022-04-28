@@ -60,7 +60,6 @@
         </nav>
     </header>
     <!--/ header -->
-
     <div class="container-fluid" id="small-banner">
 
     </div>
@@ -98,33 +97,20 @@
     <script src="./js/jquery-3.3.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/handlebars-v4.7.7.js"></script>
+    <script src="./js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="./js/templates.js"></script>
     <script src="./js/21880067.js"></script>
-    <script id="gallery-categories-template" type="text/x-handlebars-template">
-        <li class="nav-item">
-            <a class="nav-link active" href="#" onclick="loadGallery(this)">Show all</a>
-        </li>
-        {{#each data}}
-        <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadGallery(this, '{{id}}')">{{name}}</a>
-        </li>
-        {{/each}}
-    </script>
-    <script id="gallery-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col-sm-6 col-md-4 col-lg-3 mb-5"><img src="{{imagepath}}" alt="" class="img-thumbnail"></div>
-        {{/each}}
-    </script>
+    
     <script>
         $(document).ready(function () {
-            loadData("gallery-categories", "#gallery-categories", "#gallery-categories-template");
-            loadData("gallery", "#gallery", "#gallery-template");
+            loadData("gallery-categories", "#gallery-categories", "menu-gallery-categories");
+            loadData("gallery", "#gallery", "menu-gallery");
         })
         function loadGallery(link, id) {
             if (id) {
-                loadData(`gallery/categories/${id}`, "#gallery", "#gallery-template");
+                loadData(`gallery/categories/${id}`, "#gallery", "menu-gallery");
             } else {
-                loadData("gallery", "#gallery", "#gallery-template");
+                loadData("gallery", "#gallery", "menu-gallery");
             }
             $("#gallery-categories .nav-link").removeClass("disabled");
             console.log(link); // show the clicked element

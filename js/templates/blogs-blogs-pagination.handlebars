@@ -1,0 +1,52 @@
+{{#pagination currentPage pageCount size api}}
+  <nav aria-label="Page navigation" style="clear: both;" class="py-3">
+    <ul class="pagination">
+      {{#unless startFromFirstPage}}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="#"
+            aria-label="Previous"
+            onclick="loadBlog('{{api}}', 1)"
+          >
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+      {{/unless}}
+
+      {{#each pages}}
+        {{#if isCurrent}}
+          <li class="page-item active">
+            <a
+              class="page-link"
+              href="#"
+              onclick="loadBlog('{{api}}', {{page}})"
+            >{{page}}</a>
+          </li>
+        {{else}}
+          <li class="page-item">
+            <a
+              class="page-link"
+              href="#"
+              onclick="loadBlog('{{api}}', {{page}})"
+            >{{page}}</a>
+          </li>
+        {{/if}}
+      {{/each}}
+      {{#unless endAtLastPage}}
+        <li class="page-item">
+          <a
+            class="page-link"
+            href="#"
+            aria-label="Next"
+            onclick="loadBlog('{{api}}', '{{pageCount}}')"
+          >
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      {{/unless}}
+    </ul>
+  </nav>
+{{/pagination}}
